@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="test.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="carousel">
+            <input type="radio" name="images" id="s1" checked>
+            <input type="radio" name="images" id="s2">
+            <input type="radio" name="images" id="s3">
+
+            <div class="img-slide" id="img-1">
+
+                <img src="https://images.unsplash.com/photo-1528041119984-da3a9f8d04d1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    alt="" height="100%" width="100%">
+
+                <label class="prev" for="s3"><span></span></label>
+                <label class="next" for="s2"><span></span></label>
+            </div>
+
+            <div class="img-slide" id="img-2">
+
+                <img src="https://images.unsplash.com/photo-1604883781245-0aca44fff711?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    alt="" height="100%" width="100%">
+
+                <label class="prev" for="s1"><span></span></label>
+                <label class="next" for="s3"><span></span></label>
+            </div>
+
+            <div class="img-slide" id="img-3">
+
+                <img src="https://images.unsplash.com/photo-1598759612090-6fa88db25a1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGRpc25leXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    alt="" height="100%" width="100%">
+
+                <label class="prev" for="s2"><span></span></label>
+                <label class="next" for="s1"><span></span></label>
+            </div>
+
+            <div id="indicators">
+                <label for="s1" class="bullets" id="dot1"></label>
+                <label for="s2" class="bullets" id="dot2"></label>
+                <label for="s3" class="bullets" id="dot3"></label>
+            </div>
+
+        </div>
+    </body>
+
+</html>
