@@ -89,44 +89,149 @@
         </div>
 
         <div class="carousel">
-            <input type="radio" name="images" id="s1" checked>
-            <input type="radio" name="images" id="s2">
-            <input type="radio" name="images" id="s3">
+            <div class="carousel-inner">
+                <input type="radio" name="images" id="s1" checked>
+                <input type="radio" name="images" id="s2">
+                <input type="radio" name="images" id="s3">
 
-            <div class="img-slide" id="img-1">
+                <div class="img-slide" id="img-1">
+                    <h1>Disney Weddings</h1>
+                    <p>Episode 1</p>
+                    <!-- <img src="https://images.unsplash.com/photo-1528041119984-da3a9f8d04d1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                        alt="" height="100%" width="100%"> -->
 
-                <img src="https://images.unsplash.com/photo-1528041119984-da3a9f8d04d1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                    alt="" height="100%" width="100%">
+                    <label class="prev" for="s3"><span></span></label>
+                    <label class="next" for="s2"><span></span></label>
+                </div>
 
-                <label class="prev" for="s3"><span></span></label>
-                <label class="next" for="s2"><span></span></label>
+                <div class="img-slide" id="img-2">
+                    <h1>Donald Duck Adventures</h1>
+                    <p>Now Streaming with Premier Access</p>
+                    <!-- <img src="https://images.unsplash.com/photo-1604883781245-0aca44fff711?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                        alt="" height="100%" width="100%"> -->
+
+                    <label class="prev" for="s1"><span></span></label>
+                    <label class="next" for="s3"><span></span></label>
+                </div>
+
+                <div class="img-slide" id="img-3">
+                    <h1>Lion King 4</h1>
+                    <p>Coming this Septemeber!</p>
+                    <!-- <img src="https://images.unsplash.com/photo-1598759612090-6fa88db25a1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGRpc25leXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                        alt="" height="100%" width="100%"> -->
+
+                    <label class="prev" for="s2"><span></span></label>
+                    <label class="next" for="s1"><span></span></label>
+                </div>
+
+                <div id="indicators">
+                    <label for="s1" class="bullets" id="dot1"></label>
+                    <label for="s2" class="bullets" id="dot2"></label>
+                    <label for="s3" class="bullets" id="dot3"></label>
+                </div>
+
             </div>
-
-            <div class="img-slide" id="img-2">
-
-                <img src="https://images.unsplash.com/photo-1604883781245-0aca44fff711?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                    alt="" height="100%" width="100%">
-
-                <label class="prev" for="s1"><span></span></label>
-                <label class="next" for="s3"><span></span></label>
-            </div>
-
-            <div class="img-slide" id="img-3">
-
-                <img src="https://images.unsplash.com/photo-1598759612090-6fa88db25a1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGRpc25leXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                    alt="" height="100%" width="100%">
-
-                <label class="prev" for="s2"><span></span></label>
-                <label class="next" for="s1"><span></span></label>
-            </div>
-
-            <div id="indicators">
-                <label for="s1" class="bullets" id="dot1"></label>
-                <label for="s2" class="bullets" id="dot2"></label>
-                <label for="s3" class="bullets" id="dot3"></label>
-            </div>
-
         </div>
+
+        <div class="categories">
+            <div class="section">
+                <div class="title">
+                    <h3>Disney</h3>
+                </div>
+                <video class="clip" src="./videos/Disney Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>Pixar</h3>
+                </div>
+                <video class="clip" src="./videos/Pixar Intro.mp4" loop muted></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>Marvel</h3>
+                </div>
+                <video class="clip" src="./videos/Marvel Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>Star Wars</h3>
+                </div>
+                <video class="clip" src="./videos/Starwars Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>National Geographic</h3>
+                </div>
+                <video class="clip" src="./videos/National Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>STAR</h3>
+                </div>
+                <video class="clip" src="./videos/Star Intro.mp4" loop></video>
+            </div>
+        </div>
+
+        <!-- <div class="image-grid">
+            <div class="new-shows">
+                <input type="radio" name="newShows" id="section1">
+                <input type="radio" name="newShows" id="section2">
+
+
+                <div class="section">
+
+
+                    <div class="show" id="show1">
+                        <h1>I am new1</h1>
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new2</h1>
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new3</h1>
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new4</h1>
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new5</h1>
+                    </div>
+
+                    <div class="controls">
+                        <label class="before" for=""><span></span></label>
+                        <label class="after" for=""><span></span></label>
+                    </div>
+
+
+                </div>
+
+                <div class="section">
+                    <div class="show" id="show1">
+                        <h1>I am new6</h1>
+
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new7</h1>
+
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new8</h1>
+
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new9</h1>
+
+                    </div>
+                    <div class="show" id="show1">
+                        <h1>I am new10</h1>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div> -->
+
 
 
 
