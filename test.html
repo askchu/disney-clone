@@ -5,50 +5,344 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Disney Clone</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="test.css">
-        <title>Document</title>
+
     </head>
 
-    <body>
+    <body class="">
+        <nav>
+            <div class="logo">
+                <img src='./pictures/disney.jpg'>
+            </div>
+
+            <div class="nav-icons">
+                <ul>
+                    <li>
+                        <a class="main-icons">
+                            <i class="fas fa-home"></i>
+                            <p class="icon-content">Home</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="main-icons">
+                            <i class="fas fa-search"></i>
+                            <p class="icon-content">Search</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="main-icons">
+                            <i class="fas fa-plus"></i>
+                            <p class="icon-content"><span>Watchlist</span></p>
+                        </a>
+                    </li>
+                    <li class="icons">
+                        <a>
+                            <i class="fas fa-star"></i>
+                            <p class="icon-content">Originals</p>
+                        </a>
+                    </li>
+                    <li class="icons">
+                        <a>
+                            <i class="fas fa-film"></i>
+                            <p class="icon-content">Movies</p>
+                        </a>
+                    </li>
+                    <li class="icons">
+                        <a>
+                            <i class="fas fa-tv"></i>
+                            <p class="icon-content">Series</p>
+                        </a>
+                    </li>
+                    <li class="dropdown" id="more-icons">
+                        <i class="fas fa-ellipsis-v"></i>
+                        <div class="dropdown-content">
+                            <a>
+                                <i class="fas fa-star"></i>
+                                <p class="link-content">Originals</p>
+                            </a>
+                            <a>
+                                <i class="fas fa-film"></i>
+                                <p class="link-content">Movies</p>
+                            </a>
+                            <a>
+                                <i class="fas fa-tv"></i>
+                                <p class="link-content">Series</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="profilePic">
+                <div>
+                    <img src='./pictures/elsa.jpg'>
+                </div>
+            </div>
+        </nav>
+
         <div class="carousel">
-            <input type="radio" name="images" id="s1" checked>
-            <input type="radio" name="images" id="s2">
-            <input type="radio" name="images" id="s3">
+            <div class="carousel-inner">
+                <input type="radio" name="images" id="s1" checked>
+                <input type="radio" name="images" id="s2">
+                <input type="radio" name="images" id="s3">
 
-            <div class="img-slide" id="img-1">
+                <div class="img-slide" id="img-1">
+                    <h1>Disney Weddings</h1>
+                    <p>Episode 1</p>
 
-                <img src="https://images.unsplash.com/photo-1528041119984-da3a9f8d04d1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                    alt="" height="100%" width="100%">
 
-                <label class="prev" for="s3"><span></span></label>
-                <label class="next" for="s2"><span></span></label>
+                    <label class="prev" for="s3"><span></span></label>
+                    <label class="next" for="s2"><span></span></label>
+                </div>
+
+                <div class="img-slide" id="img-2">
+                    <h1>Donald Duck Adventures</h1>
+                    <p>Now Streaming with Premier Access</p>
+
+
+                    <label class="prev" for="s1"><span></span></label>
+                    <label class="next" for="s3"><span></span></label>
+                </div>
+
+                <div class="img-slide" id="img-3">
+                    <h1>Lion King 4</h1>
+                    <p>Coming this September!</p>
+
+
+                    <label class="prev" for="s2"><span></span></label>
+                    <label class="next" for="s1"><span></span></label>
+                </div>
+
+                <div id="indicators">
+                    <label for="s1" class="bullets" id="dot1"></label>
+                    <label for="s2" class="bullets" id="dot2"></label>
+                    <label for="s3" class="bullets" id="dot3"></label>
+                </div>
+
             </div>
-
-            <div class="img-slide" id="img-2">
-
-                <img src="https://images.unsplash.com/photo-1604883781245-0aca44fff711?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                    alt="" height="100%" width="100%">
-
-                <label class="prev" for="s1"><span></span></label>
-                <label class="next" for="s3"><span></span></label>
-            </div>
-
-            <div class="img-slide" id="img-3">
-
-                <img src="https://images.unsplash.com/photo-1598759612090-6fa88db25a1c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGRpc25leXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                    alt="" height="100%" width="100%">
-
-                <label class="prev" for="s2"><span></span></label>
-                <label class="next" for="s1"><span></span></label>
-            </div>
-
-            <div id="indicators">
-                <label for="s1" class="bullets" id="dot1"></label>
-                <label for="s2" class="bullets" id="dot2"></label>
-                <label for="s3" class="bullets" id="dot3"></label>
-            </div>
-
         </div>
+
+        <div class="categories">
+            <div class="section">
+                <div class="title">
+                    <h3>Disney</h3>
+                </div>
+                <video class="clip" src="./videos/Disney Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>Pixar</h3>
+                </div>
+                <video class="clip" src="./videos/Pixar Intro.mp4" loop muted></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>Marvel</h3>
+                </div>
+                <video class="clip" src="./videos/Marvel Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>Star Wars</h3>
+                </div>
+                <video class="clip" src="./videos/Starwars Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>National Geographic</h3>
+                </div>
+                <video class="clip" src="./videos/National Intro.mp4" loop></video>
+            </div>
+            <div class="section">
+                <div class="title">
+                    <h3>STAR</h3>
+                </div>
+                <video class="clip" src="./videos/Star Intro.mp4" loop></video>
+            </div>
+        </div>
+
+        <div class="disney-categories">
+            <div class="category-title">
+                <h2>New to Disney+</h2>
+            </div>
+
+            <input type="radio" id="slide1" checked>
+            <input type="radio" id="slide2">
+            <input type="radio" id="slide3">
+
+
+
+            <div class="shows">
+
+                <span class="move1">&#139;</span>
+                <span class="move1">&#155;</span>
+
+                <div class="film" id="film1">
+                    <div class="filmName">
+                        <h3>Toy Story</h3>
+                    </div>
+                </div>
+                </label>
+
+                <div class="film" id="film2">
+                    <div class="filmName">
+                        <h3>Moana</h3>
+                    </div>
+                </div>
+
+
+                <div class="film" id="film3">
+                    <div class="filmName">
+                        <h3>Onward</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film4">
+                    <div class="filmName">
+                        <h3>Frozen</h3>
+                    </div>
+                </div>
+
+
+                <div class="film" id="film5">
+                    <div class="filmName">
+                        <h3>Cinderella</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film6">
+                    <div class="filmName">
+                        <h3>Beauty and the Beast</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film7">
+                    <div class="filmName">
+                        <h3>The Little Mermaid</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film8">
+                    <div class="filmName">
+                        <h3>Princess and the Frog</h3>
+                    </div>
+                </div>
+                <div class="film" id="film9">
+                    <div class="filmName">
+                        <h3>Queen of Katwe</h3>
+                    </div>
+                </div>
+                <div class="film" id="film10">
+                    <div class="filmName">
+                        <h3>Remember the Titans</h3>
+                    </div>
+                </div>
+                <div class="film" id="film11">
+                    <div class="filmName">
+                        <h3>Ratatouille</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="disney-categories">
+            <div class="category-title">
+                <h2>Because You Watched Moana</h2>
+            </div>
+
+            <input type="radio" id="slide4" checked>
+            <input type="radio" id="slide5">
+            <input type="radio" id="slide6">
+
+
+
+            <div class="shows">
+
+                <span class="move2">&#139;</span>
+                <span class="move2">&#155;</span>
+
+                <div class="film" id="film12">
+                    <div class="filmName">
+                        <h3>Toy Story</h3>
+                    </div>
+                </div>
+                </label>
+
+                <div class="film" id="film13">
+                    <div class="filmName">
+                        <h3>Moana</h3>
+                    </div>
+                </div>
+
+
+                <div class="film" id="film14">
+                    <div class="filmName">
+                        <h3>Onward</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film15">
+                    <div class="filmName">
+                        <h3>Frozen</h3>
+                    </div>
+                </div>
+
+
+                <div class="film" id="film16">
+                    <div class="filmName">
+                        <h3>Cinderella</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film17">
+                    <div class="filmName">
+                        <h3>Beauty and the Beast</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film18">
+                    <div class="filmName">
+                        <h3>The Little Mermaid</h3>
+                    </div>
+                </div>
+
+                <div class="film" id="film19">
+                    <div class="filmName">
+                        <h3>Princess and the Frog</h3>
+                    </div>
+                </div>
+                <div class="film" id="film20">
+                    <div class="filmName">
+                        <h3>Queen of Katwe</h3>
+                    </div>
+                </div>
+                <div class="film" id="film21">
+                    <div class="filmName">
+                        <h3>Remember the Titans</h3>
+                    </div>
+                </div>
+                <div class="film" id="film22">
+                    <div class="filmName">
+                        <h3>Ratatouille</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <script src="test.js"></script>
     </body>
 
 </html>

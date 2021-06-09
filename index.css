@@ -10,12 +10,7 @@ body{
     background-repeat: no-repeat;
     color: #fff;
 }
-.container{
-    width: 100%;
-    max-width: 1200px;
-    background: black;
-    margin: 0 auto;
-}
+
 
 /* NAVBAR */
 nav {
@@ -282,11 +277,16 @@ nav {
     z-index: 10;
     box-shadow: var(--box-shadow);
     /* max-height: 400px; */
-    padding: 40px 45px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-shadow: 2px 1px 2px #111;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.00);
+}
+.img-slide:hover{
+    border: 3px solid #eee;
 }
 
 img {
@@ -323,19 +323,19 @@ img {
 }
 
 .img-slide h1{
-    font-size: 2.5rem;
+    font-size: 4vw;
 }
 .img-slide p{
-    font-size: 1.8rem;
+    font-size: 2vw;
     font-weight: 700;
 }
-@media (max-width: 550px){
-    .img-slide h1{
+@media (max-width: 7700px){
+    /* .img-slide h1{
         font-size: 2rem;
     }
     .img-slide p{
         font-size: 1.5rem;
-    }
+    } */
 }
 
 .carousel .prev, .next {
@@ -348,7 +348,7 @@ img {
     transition: .45s;
     cursor: pointer;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
     /* extra code write below */
     display: none;
     width: 5%;
@@ -482,7 +482,7 @@ img {
     width: 100%;
     /* max-width: 200px; */
     /* height: 100%; */
-    height: 7vw;
+    height: 9vw;
     padding: 30px 40px;
     border: 3px solid rgb(67, 65, 65);
     border-radius: 10px;
@@ -492,13 +492,13 @@ img {
     align-items: center;
     position: relative;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    
 }
 
 
 @keyframes bigger{
     0% {
         transform: scale(0.95);
-        border: 3px solid rgb(67, 65, 65);
         padding: 30px 40px;
     }
     100%{    
@@ -542,6 +542,9 @@ img {
 }
 
 @media (max-width: 770px){
+    .section{
+        height: 15vw;
+    }
     .categories{
         grid-template-columns: repeat(3, 1fr);
     }
@@ -613,4 +616,228 @@ img {
     width: 100%;
     height: 10%;
 } */
+
+/* .filmSelections{
+    width: 90%;
+    margin: 0 auto;
+} */
+
+
+/* New to Disney+ */
+.disney-categories{
+    position: relative;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.disney-categories::-webkit-scrollbar{
+    visibility: hidden;
+}
+.disney-categories input{
+    display: none;
+}
+.category-title{
+    width: 90%;
+    margin: 0 auto;
+}
+.shows{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    /* height: 100%; */
+    max-height: max-content;
+    /* height: 330awpx; */
+    /* margin: 10px auto; */
+    justify-content: left;
+    /* overflow-x: auto; */
+    margin-top: 20px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    left: 3.8%;
+    /* overflow: hidden; */
+}
+
+
+.shows::-webkit-scrollbar{
+    visibility: hidden;
+}
+.shows span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    top: 0;
+    width: 80px;
+    height: 100%;
+    font-size: 80px;
+    color: white;
+    cursor: pointer;
+    left: -4%;
+    z-index: 50;
+    /* opacity: 0; */
+    transition: 0.2s;
+
+}
+.shows span:nth-child(2){
+    left: 94.5%;
+    justify-content: flex-start;
+    align-items: center;
+    /* right: 0; */
+}
+.shows span:hover{
+    opacity: 1;
+}
+
+#slide1:checked ~ .shows span:nth-child(1){
+    display: none;
+}
+
+#slide2:checked ~ .shows span:nth-child(1){
+    display: flex;
+}
+#slide3:checked ~ .shows span:nth-child(1){
+    display: flex;
+}
+#slide3:checked ~ .shows span:nth-child(2){
+    display: none;
+}
+
+.film{
+    position: relative;
+    min-width: 280px;
+    height: 200px;
+    left: 0;
+    text-align: center;
+    /* padding-top: 60px; */
+    transition: 0.5s;
+    margin: 0 30px 0 10px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    text-shadow: 2px 4px 4px #111;
+    border-radius: 10px;
+    z-index: 40;
+}
+
+
+/* .film:hover{
+    transition: 0.1s;
+    transform: scale(1.05);
+    border: 2px solid #eee;
+    cursor: pointer;
+} */
+.filmName{
+    position: absolute;
+    padding: 5px 10px;
+    text-shadow: 1px 2px 1px #111;
+    z-index: 50;
+    font-size: 1.2vw;
+    text-align: center;
+}
+@media (max-width: 770px){
+    .film{
+        min-width: 39vw;
+        max-width: 155px;
+        height: 25vw;
+    }
+    .shows span{
+        height: 100%;
+        left: -16%;
+        justify-content: flex-end;
+    }
+    .shows span:nth-child(2){
+        /* left: 81.3%; */
+        left: 89%;
+        padding-left: 10px;
+    }
+}  
+@media (min-width: 771px){
+    .film{
+        min-width: 25vw;
+        height: 16vw;
+        max-height: 150px;
+        margin: 0 2vw;
+    }
+    .shows span{
+        opacity: 1;
+        left: -75px;
+        justify-content: flex-end;
+    }
+    .shows span:nth-child(2){
+        left: 90%;
+        padding-left: 10px;
+    }
+}  
+
+@media (min-width: 924px){
+    .film{
+        width: 18.5vw;
+        height: 50vw;
+        max-height: 150px;
+    }
+    .shows span{
+        opacity: 1;
+        left: -75px;
+        justify-content: flex-end;
+    }
+    .shows span:nth-child(2){
+        left: 91%;
+        padding-left: 10px;
+    }
+}
+@media (min-width: 1090px){
+    .film{
+         min-width: 310px;
+        height: 200px;
+    }
+    .shows span{
+        opacity: 1;
+        left: -100px;
+        justify-content: flex-end;
+    }
+    .shows span:nth-child(2){
+        left: 94%;
+        padding-left: 10px;
+    }
+}
+
+
+
+/* .film:nth-of-type(2n+1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.film:nth-of-type(2n){
+    display: flex;
+}
+.film2:nth-of-type(2n+1){
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.film2:nth-of-type(2n){
+    display: flex;
+} */
+
+
+
+#film1{
+    background: url("./pictures/toystory.jfif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+#film2{
+    background: url("./pictures/moana.jfif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film3{
+    background: url("https://images.unsplash.com/photo-1524008279394-3aed4643b30b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
