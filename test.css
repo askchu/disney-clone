@@ -303,7 +303,7 @@ img {
 }
 
 #img-2{
-    background: url("https://images.unsplash.com/photo-1604883781245-0aca44fff711?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+    background: url("./pictures/moana2.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -612,16 +612,7 @@ img {
     background-size: cover;
 }
 
-/* .controls{
-    position: absolute;
-    width: 100%;
-    height: 10%;
-} */
 
-/* .filmSelections{
-    width: 90%;
-    margin: 0 auto;
-} */
 
 
 /* New to Disney+ */
@@ -658,23 +649,27 @@ img {
 }
 .shows .film{
     position: absolute;
-    min-width: 33vw;
+    min-width: 34vw;
     /* min-width: 170px; */
     /* height: 100px; */
     height: 20vw;
     transition: 0.4s;
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-    text-shadow: 2px 2px 2px #111;
+    text-shadow: 4px 2px 2px black;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px;
     margin: 10px 10px;
 }
 
 .film .filmName{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 2px;
     position: absolute;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 
@@ -694,7 +689,7 @@ img {
     font-size: 80px;
     color: white;
     cursor: pointer;
-    left: -4.5%;
+    left: -3%;
     z-index: 50;
     /* opacity: 0; */
     transition: 0.2s;
@@ -714,43 +709,60 @@ img {
         max-height: 15vw;
     }
     .shows{
-        padding-bottom: 23%;
+        padding-bottom: 21.5%;
     }
     .shows span{
-        height: 60%;
+        height: 80%;
     }
     .shows span:nth-child(2){
         left: 102%;
     }
-    .filmName{
+    .film .filmName{
         font-size: 1.1rem;
     }
 }
 @media (min-width: 1025px){
-        .shows .film{
-        min-width: 18vw;
+    .shows .film{
+        min-width: 18.5vw;
         min-height: 10vw;
         max-height: 12vw;
     }
+    .shows{
+        padding-bottom: 17%;
+    }
     .shows span{
-        height: 50%;
+        height: 80%;
     }
     .shows span:nth-child(2){
-        left: 100%;
+        left: 101%;
     }
-    .filmName{
+    .film .filmName{
         font-size: 1.2rem;
     }
 }
-
+@media (min-width: 1440px){
+    .shows .film{
+        min-width: 15vw;
+        max-height: 10vw;
+    }
+    .shows{
+        padding-bottom: 14%;
+    }
+    .film .filmName{
+        font-size: 1.3rem;
+    }
+    .shows span:nth-child(2){
+        left: 101%;
+    }
+}
 
 .shows span:hover{
     opacity: 1;
 }
 
-/* #slide1:checked ~ .shows span:nth-child(1){
+#slide1:checked ~ .shows span:nth-child(1){
     display: none;
-} */
+}
 
 #slide2:checked ~ .shows span:nth-child(1){
     display: flex;
@@ -774,43 +786,36 @@ img {
     background: url("./pictures/toystory.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
 }
 
 #film2{
     background: url("./pictures/moana.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    justify-content: flex-start;
+    
 }
 #film3{
     background: url("./pictures/elf.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    justify-content: flex-end;
 }
 
 #film4{
     background: url("./pictures/frozen.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    justify-content: flex-start;
+    
 }
 #film5{
     background: url("./pictures/cinderalla.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    justify-content: center;
-    align-items: flex-end;
 }
 #film6{
     background: url("./pictures/beautybeast.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 #film6 .filmName{
     width: 80%;
@@ -819,36 +824,53 @@ img {
     background: url("./pictures/mermaid.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    align-items: flex-end;
 }
 #film8{
     background: url("./pictures/princessfrog.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    justify-content: flex-start;
 }
 #film8 .filmName{
     width: 50%;
+    /* font-size: 1.1rem; */
 }
 #film9{
     background: url("./pictures/queenofKatwe.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    align-items: flex-end;
 }
 #film10{
     background: url("./pictures/titans.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    justify-content: flex-end;
 }
 #film10 .filmName{
-    text-align: right;
+    /* text-align: right; */
+    /* width: 50%; */
+    /* justify-content: center; */
 }
 #film11{
     background: url("./pictures/ratatouille.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    align-items: flex-end;
 }
-
+#film12{
+    background: url("./pictures/insideOut.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film13{
+    background: url("./pictures/nemo.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film14{
+    background: url("./pictures/frozen.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film15{
+    background: url("./pictures/zootopia.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
