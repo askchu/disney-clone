@@ -303,7 +303,7 @@ img {
 }
 
 #img-2{
-    background: url("https://images.unsplash.com/photo-1604883781245-0aca44fff711?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+    background: url("./pictures/moana2.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -588,6 +588,7 @@ img {
     transform: scale(0.95);
     text-align: center;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 
@@ -611,26 +612,16 @@ img {
     background-size: cover;
 }
 
-/* .controls{
-    position: absolute;
-    width: 100%;
-    height: 10%;
-} */
 
-/* .filmSelections{
-    width: 90%;
-    margin: 0 auto;
-} */
 
 
 /* New to Disney+ */
 .disney-categories{
-    position: relative;
-    padding-bottom: 50px;
     width: 100%;
-    height: 400px;
+    height: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-X: hidden;
+    box-sizing: border-box;
 }
 .disney-categories::-webkit-scrollbar{
     visibility: hidden;
@@ -641,28 +632,53 @@ img {
 .category-title{
     width: 90%;
     margin: 0 auto;
+    font-size: 0.8rem;
 }
+
 .shows{
+   position: relative;
+   display: flex;
+   /* justify-content: center; */
+   width: 90%;
+   /* margin: 0 10px; */
+   transform-style: preserve-3d;
+   perspective: 1000px;
+   /* padding: 0 20px 60% 20px */
+   padding-bottom: 30%;
+   margin: 0 auto;
+}
+.shows .film{
     position: absolute;
+    min-width: 34vw;
+    /* min-width: 170px; */
+    /* height: 100px; */
+    height: 20vw;
+    transition: 0.4s;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    text-shadow: 2px 2px 2px black;
     display: flex;
-    width: 100%;
-    /* height: 100%; */
-    max-height: max-content;
-    /* height: 330awpx; */
-    /* margin: 10px auto; */
-    justify-content: left;
-    /* overflow-x: auto; */
-    margin-top: 20px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    left: 3.8%;
-    /* overflow: hidden; */
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    margin: 10px 10px;
+}
+
+.film .filmName{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 2px;
+    position: absolute;
+    font-size: 2.5vw;
+    text-align: center;
+    width: 70%;
 }
 
 
-.shows::-webkit-scrollbar{
+/* .shows::-webkit-scrollbar{
     visibility: hidden;
-}
+} */
+
 .shows span {
     position: absolute;
     display: flex;
@@ -670,31 +686,89 @@ img {
     align-items: center;
     /* background-color: pink; */
     top: 0;
-    width: 80px;
-    height: 100%;
+    width: 20px;
+    height: 80%;
     font-size: 80px;
     color: white;
     cursor: pointer;
-    left: -4%;
+    left: -3%;
     z-index: 50;
     /* opacity: 0; */
     transition: 0.2s;
 
 }
 .shows span:nth-child(2){
-    left: 94.5%;
+    left: 94%;
     justify-content: flex-start;
     align-items: center;
     /* right: 0; */
 }
+
+@media (min-width: 772px){
+    .shows .film{
+        min-width: 25vw;
+        min-height: 10vw;
+        max-height: 15vw;
+    }
+    .shows{
+        padding-bottom: 21.5%;
+    }
+    .shows span{
+        height: 80%;
+    }
+    .shows span:nth-child(2){
+        left: 102%;
+    }
+    .film .filmName{
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 1025px){
+    .shows .film{
+        min-width: 18.5vw;
+        min-height: 10vw;
+        max-height: 12vw;
+    }
+    .shows .filmName{
+        font-size: 1.3vw;
+    }
+    .shows{
+        padding-bottom: 17%;
+    }
+    .shows span{
+        height: 80%;
+    }
+    .shows span:nth-child(2){
+        left: 101%;
+    }
+    .film .filmName{
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 1440px){
+    .shows .film{
+        min-width: 15vw;
+        max-height: 10vw;
+    }
+    .shows{
+        padding-bottom: 14%;
+    }
+    .film .filmName{
+        font-size: 1.3rem;
+    }
+    .shows span:nth-child(2){
+        left: 101%;
+    }
+}
+
 .shows span:hover{
     opacity: 1;
 }
 
+/* New to Disney+ */
 #slide1:checked ~ .shows span:nth-child(1){
     display: none;
 }
-
 #slide2:checked ~ .shows span:nth-child(1){
     display: flex;
 }
@@ -705,139 +779,291 @@ img {
     display: none;
 }
 
-.film{
-    position: relative;
-    min-width: 280px;
-    height: 200px;
-    left: 0;
-    text-align: center;
-    /* padding-top: 60px; */
-    transition: 0.5s;
-    margin: 0 30px 0 10px;
-    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-    text-shadow: 2px 4px 4px #111;
-    border-radius: 10px;
-    z-index: 40;
+
+/* Because you watched Moana */
+#slide4:checked ~ .shows span:nth-child(1){
+    display: none;
+}
+#slide5:checked ~ .shows span:nth-child(1){
+    display: flex;
+}
+#slide6:checked ~ .shows span:nth-child(1){
+    display: flex;
+}
+#slide6:checked ~ .shows span:nth-child(2){
+    display: none;
 }
 
+/* Recommended for You */
+#slide7:checked ~ .shows span:nth-child(1){
+    display: none;
+}
+#slide8:checked ~ .shows span:nth-child(1){
+    display: flex;
+}
+#slide9:checked ~ .shows span:nth-child(1){
+    display: flex;
+}
+#slide9:checked ~ .shows span:nth-child(2){
+    display: none;
+}
 
-/* .film:hover{
+.film:hover{
     transition: 0.1s;
-    transform: scale(1.05);
-    border: 2px solid #eee;
+    border: 3px solid #eee;
     cursor: pointer;
-} */
-.filmName{
-    position: absolute;
-    padding: 5px 10px;
-    text-shadow: 1px 2px 1px #111;
-    z-index: 50;
-    font-size: 1.2vw;
-    text-align: center;
 }
-@media (max-width: 770px){
-    .film{
-        min-width: 39vw;
-        max-width: 155px;
-        height: 25vw;
-    }
-    .shows span{
-        height: 100%;
-        left: -16%;
-        justify-content: flex-end;
-    }
-    .shows span:nth-child(2){
-        /* left: 81.3%; */
-        left: 89%;
-        padding-left: 10px;
-    }
-}  
-@media (min-width: 771px){
-    .film{
-        min-width: 25vw;
-        height: 16vw;
-        max-height: 150px;
-        margin: 0 2vw;
-    }
-    .shows span{
-        opacity: 1;
-        left: -75px;
-        justify-content: flex-end;
-    }
-    .shows span:nth-child(2){
-        left: 90%;
-        padding-left: 10px;
-    }
-}  
-
-@media (min-width: 924px){
-    .film{
-        width: 18.5vw;
-        height: 50vw;
-        max-height: 150px;
-    }
-    .shows span{
-        opacity: 1;
-        left: -75px;
-        justify-content: flex-end;
-    }
-    .shows span:nth-child(2){
-        left: 91%;
-        padding-left: 10px;
-    }
-}
-@media (min-width: 1090px){
-    .film{
-         min-width: 310px;
-        height: 200px;
-    }
-    .shows span{
-        opacity: 1;
-        left: -100px;
-        justify-content: flex-end;
-    }
-    .shows span:nth-child(2){
-        left: 94%;
-        padding-left: 10px;
-    }
-}
-
-
-
-/* .film:nth-of-type(2n+1){
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.film:nth-of-type(2n){
-    display: flex;
-}
-.film2:nth-of-type(2n+1){
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.film2:nth-of-type(2n){
-    display: flex;
-} */
-
 
 
 #film1{
     background: url("./pictures/toystory.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
 }
+
 #film2{
     background: url("./pictures/moana.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    
 }
 #film3{
-    background: url("https://images.unsplash.com/photo-1524008279394-3aed4643b30b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlzbmV5fGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+    background: url("./pictures/elf.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+
+#film4{
+    background: url("./pictures/frozen.jfif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+#film5{
+    background: url("./pictures/cinderalla.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film6{
+    background: url("./pictures/beautybeast.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+}
+#film6 .filmName{
+    width: 80%;
+}
+#film7{
+    background: url("./pictures/mermaid.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film8{
+    background: url("./pictures/princessfrog.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film8 .filmName{
+    width: 70%;
+}
+#film9{
+    background: url("./pictures/queenofKatwe.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film10{
+    background: url("./pictures/titans.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film10 .filmName{
+    width: 70%;
+}
+#film11{
+    background: url("./pictures/ratatouille.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film12{
+    background: url("./pictures/insideOut.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film13{
+    background: url("./pictures/nemo.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film14{
+    background: url("./pictures/frozen.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film15{
+    background: url("./pictures/zootopia.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film16{
+    background: url("./pictures/mulan.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film17{
+    background: url("./pictures/black\ panther.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film18{
+    background: url("./pictures/avengers-endgame.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film18 .filmName{
+    width: 70%;
+  
+}
+#film19{
+    background: url("./pictures/coco.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film20{
+    background: url("./pictures/soul.jfif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film21{
+    background: url("./pictures/lady-tramp.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film21 .filmName{
+    width: 70%;
+    
+}
+#film22{
+    background: url("./pictures/Wall-e.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film23{
+    background: url("./pictures/snow-white.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film23 .filmName{
+    width: 70%;
+    font-size: 1.3vw;
+}
+#film24{
+    background: url("./pictures/Lion-king.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film25{
+    background: url("./pictures/up.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film26{
+    background: url("./pictures/aladdin.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film27{
+    background: url("./pictures/aristocats.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film28{
+    background: url("./pictures/raya-the-last-dragon.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film28 .filmName{
+    width: 70%;
+    
+}
+#film29{
+    background: url("./pictures/cars.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film30{
+    background: url("./pictures/christopher-robin.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film31{
+    background: url("./pictures/peter-pan.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film32{
+    background: url("./pictures/nightmare-before-christmas.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film33{
+    background: url("./pictures/pinocchio.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film34{
+    background: url("./pictures/bambi.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film35{
+    background: url("./pictures/tangled.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film36{
+    background: url("./pictures/big-hero-6.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film37{
+    background: url("./pictures/lilo-stitch.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film38{
+    background: url("./pictures/incredibles.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film39{
+    background: url("./pictures/toy-story-3.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film40{
+    background: url("./pictures/honey-i-shrunk-the-kids.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film41{
+    background: url("./pictures/brave.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film42{
+    background: url("./pictures/boss-baby-back.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#film43{
+    display: none;
+}
+#film44{
+    display: none;
+}
+#film45{
+    display: none;
+}
+
+
 

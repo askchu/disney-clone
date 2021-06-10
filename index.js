@@ -52,10 +52,69 @@ const film15 = document.querySelector("#film15");
 
 carousel(move1[1], move1[0], slide1, slide2, slide3, count1, film1, film2, film3, film4, film5, film6, film7, film8, film9, film10, film11, film12, film13, film14, film15);
 
+// Because You Watched Moana
 
+// Count
+let count2 = 0
 
+// Input
+const slide4 = document.querySelector("#slide4");
+const slide5 = document.querySelector("#slide5");
+const slide6 = document.querySelector("#slide6");
 
+// Controls
+const move2 = document.querySelectorAll(".move2");
 
+// Films
+const film16 = document.querySelector("#film16");
+const film17 = document.querySelector("#film17");
+const film18 = document.querySelector("#film18");
+const film19 = document.querySelector("#film19");
+const film20 = document.querySelector("#film20");
+const film21 = document.querySelector("#film21");
+const film22 = document.querySelector("#film22");
+const film23 = document.querySelector("#film23");
+const film24 = document.querySelector("#film24");
+const film25 = document.querySelector("#film25");
+const film26 = document.querySelector("#film26");
+const film27 = document.querySelector("#film27");
+const film28 = document.querySelector("#film28");
+const film29 = document.querySelector("#film29");
+const film30 = document.querySelector("#film30");
+
+carousel(move2[1], move2[0], slide4, slide5, slide6, count2, film16, film17, film18, film19, film20, film21, film22, film23, film24, film25, film26, film27, film28, film29, film30)
+
+// Recommended For You
+
+// Count
+let count3 = 0
+
+// Input
+const slide7 = document.querySelector("#slide7");
+const slide8 = document.querySelector("#slide8");
+const slide9 = document.querySelector("#slide9");
+
+// Controls
+const move3 = document.querySelectorAll(".move3");
+
+// Films
+const film31 = document.querySelector("#film31");
+const film32 = document.querySelector("#film32");
+const film33 = document.querySelector("#film33");
+const film34 = document.querySelector("#film34");
+const film35 = document.querySelector("#film35");
+const film36 = document.querySelector("#film36");
+const film37 = document.querySelector("#film37");
+const film38 = document.querySelector("#film38");
+const film39 = document.querySelector("#film39");
+const film40 = document.querySelector("#film40");
+const film41 = document.querySelector("#film41");
+const film42 = document.querySelector("#film42");
+const film43 = document.querySelector("#film43");
+const film44 = document.querySelector("#film44");
+const film45 = document.querySelector("#film45");
+
+carousel(move3[1], move3[0], slide7, slide8, slide9, count3, film31, film32, film33, film34, film35, film36, film37, film38, film39, film40, film41, film42, film43, film44, film45)
 
 
 function carousel(moveRight, moveLeft, s1, s2, s3, number, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15) {
@@ -479,7 +538,7 @@ function carousel(moveRight, moveLeft, s1, s2, s3, number, f1, f2, f3, f4, f5, f
     // IPAD VIEW
 
     if (small_ipad_view.matches) {
-        console.log("small ipad view")
+        // console.log("small ipad view")
         if (s1.checked == true) {
             f1.style.transform = "translateX(0%)";
             f2.style.transform = "translateX(120%)";
@@ -809,7 +868,7 @@ function carousel(moveRight, moveLeft, s1, s2, s3, number, f1, f2, f3, f4, f5, f
 
         moveRight.addEventListener('click', () => {
             number++;
-            console.log(number)
+            // console.log(number)
             if (number == 0) {
                 f1.style.transform = "translateX(0%)";
                 f2.style.transform = "translateX(120%)";
