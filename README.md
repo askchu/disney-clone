@@ -1,1 +1,1 @@
-Disney Clone Front-end Website using only HTML, CSS, and JavaScript. 
+Disney clone front-end website using only HTML, CSS, and JavaScript. 
