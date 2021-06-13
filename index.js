@@ -15,6 +15,7 @@ for (let i = 0; i < clip.length; i++) {
 
 
 
+
 let mobile_view = window.matchMedia("(max-width: 770px)");
 let small_ipad_view = window.matchMedia("(min-width: 771px) and (max-width: 1024px");
 let big_ipad_view = window.matchMedia("(min-width: 1025px)");

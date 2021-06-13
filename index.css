@@ -22,8 +22,9 @@ nav {
     background-color: black;
     color: #fff;
     z-index: 100;
-
 }
+
+
 
 .logo{
     width: 110px;
@@ -954,7 +955,7 @@ img {
 }
 #film23 .filmName{
     width: 70%;
-    font-size: 1.3vw;
+    font-size: 0.8rem;
 }
 #film24{
     background: url("./pictures/Lion-king.jpg");
@@ -1004,6 +1005,9 @@ img {
     background: url("./pictures/nightmare-before-christmas.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+#film32 .filmName{
+    font-size: 0.8rem;
 }
 #film33{
     background: url("./pictures/pinocchio.jpg");
